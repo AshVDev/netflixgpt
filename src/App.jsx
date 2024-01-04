@@ -1,10 +1,13 @@
 import React from "react";
+import Body from "./components/Body";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
 
 const App = () => {
   return (
-    <div className="flex justify-center items-center font-bold text-5xl text-red-600 bg-slate-800 w-screen h-screen">
-      App
-    </div>
+    <Provider store={appStore}>
+      <Body />
+    </Provider>
   );
 };
 
