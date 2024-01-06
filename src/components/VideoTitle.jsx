@@ -2,11 +2,11 @@ import React from "react";
 
 const VideoTitle = ({ title, overview }) => {
   return (
-    <div className="absolute text-white bg-gradient-to-r from-black pt-[10%] px-24 w-screen aspect-video">
-      <h1 className="text-6xl font-bold">{title}</h1>
-      <p className="py-6 text-lg w-1/4">{overview}</p>
-      <div className="flex gap-2">
-        <button className="bg-white text-black p-4 px-12 text-xl hover:bg-opacity-80 rounded-lg">
+    <div className="absolute text-white bg-gradient-to-r from-black pt-[10%] px-6 md:px-24 w-screen aspect-video">
+      <h1 className="text-2xl md:text-6xl font-bold">{title}</h1>
+      <p className="hidden md:inline-block py-6 text-lg w-1/4">{overview}</p>
+      <div className="flex gap-2 my-2 md:m-0">
+        <button className="bg-white text-black py-1 md:py-4 px-3 md:px-12 text-xl hover:bg-opacity-80 rounded-lg">
           <div className="flex justify-center items-center text-center  ">
             <svg
               version="1.1"
@@ -15,7 +15,7 @@ const VideoTitle = ({ title, overview }) => {
               xmlnsXlink="http://www.w3.org/1999/xlink"
               viewBox="0 0 96.155 96.155"
               xmlSpace="preserve"
-              className="w-6 h-6 text-white"
+              className="w-4 h-4 text-white"
               fill="black"
             >
               <g>
@@ -29,7 +29,7 @@ const VideoTitle = ({ title, overview }) => {
             Play
           </div>
         </button>
-        <button className="bg-gray-500 text-white p-4 px-12 text-xl bg-opacity-50 rounded-lg">
+        <button className="hidden md:inline-block bg-gray-500 text-white p-4 px-12 text-xl bg-opacity-50 rounded-lg">
           <div className="flex justify-center items-center text-center">
             <svg
               height={48}

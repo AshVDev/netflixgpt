@@ -13,9 +13,14 @@ export const API_OPT = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmZmZhZTZmNjg5NmVhZmIxZTlhODc0MDUxYWY5YzBkOCIsInN1YiI6IjY0YWJiMjY2ZmE3OGNkMDBhZGMxYzk3ZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.DuxcUrb0IL9JJK4gFY23h0mYNEbUQxu6XR6CfLYWksY",
+    Authorization: `Bearer ${import.meta.env.VITE_TMDB_KEY}`,
   },
 };
 
 export const IMG_CDN = "https://image.tmdb.org/t/p/w500/";
+
+export const langOpt = [
+  { value: "en", name: "English" },
+  { value: "hindi", name: "Hindi" },
+  { value: "spanish", name: "Spanish" },
+];
