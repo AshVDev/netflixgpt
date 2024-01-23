@@ -36,10 +36,26 @@ const GptSearchBar = () => {
 
       const tmdbResults = await Promise.all(dataPromise);
     } catch (error) {
-      const staticResults =
-        "Andaz Apna Apna, Chupke Chupke, Amar Akbar Anthony, Khatta Meetha, Angoor".split(
-          ","
-        );
+      const RandomData = [
+        "Se7en, The Silence of the Lambs, Memento, Gone Girl, The Departed",
+        "Anchorman, Superbad, Dumb and Dumber, Bridesmaids, Step Brothers",
+        "The Conjuring, Get Out, A Quiet Place, Insidious, Hereditary",
+        "Saw, Hostel, The Human Centipede, Martyrs, Cannibal Holocaust",
+        "Finding Nemo, The Lion King, Toy Story, Moana, Frozen",
+        "Pulp Fiction, Inception, The Matrix, Fight Club, The Shawshank Redemption",
+        "Naruto, Attack on Titan, One Piece, Death Note, My Hero Academia",
+        "Iron Man, Black Panther, Avengers: Endgame, Spider-Man: Far From Home, Thor: Ragnarok",
+        "The Dark Knight, Wonder Woman, Aquaman, Shazam!, Man of Steel",
+        "Interstellar, The Grand Budapest Hotel, La La Land, The Revenant, The Social Network",
+        "The Social Dilemma, The Imitation Game, The Matrix, Ex Machina, Her",
+        "Blade Runner, Inception, The Matrix, Interstellar, Arrival",
+        "The Notebook, Titanic, La La Land, Pride and Prejudice, Before Sunrise",
+        "Akira, Perfect Blue, Ghost in the Shell, Paprika, Your Name",
+        "The Dark Knight, Inception, Forrest Gump, Pulp Fiction, The Matrix",
+        "Blade Runner 2049, Ghost in the Shell, The Matrix, Alita: Battle Angel, Akira",
+      ];
+      const randomIndex = Math.floor(Math.random() * RandomData.length);
+      const staticResults = RandomData[randomIndex].split(",");
 
       const dataPromise = staticResults.map((movie) => searchMovieTMDB(movie));
 
